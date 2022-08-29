@@ -1,0 +1,17 @@
+@page
+@model ProyectoCiclo3.App.Frontend.Pages.FormEstacionesModel
+@{
+}
+
+<div class="text-center">
+    <form method="POST">
+        <label for="origen" class="form-label">Origen</label>
+        <input type="text" class="form-control" id="origen" name="origen" required placeholder="Origen">
+        <label for="destino" class="form-label">Destino</label>
+        <input type="text" class="form-control" id="destino" name="destino" required placeholder="Destino">
+        <label for="tiempo_estimado" class="form-label">Tiempo Estimado</label>
+        <input type="number" class="form-control" id="tiempo_estimado" name="tiempo_estimado" required placeholder="Tiempo Estimado">
+        <hr>
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+</div>

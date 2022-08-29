@@ -1,0 +1,21 @@
+@page
+@model ProyectoCiclo3.App.Frontend.Pages.FormEstacionesModel
+@{
+}
+
+<div class="text-center">
+    <form method="POST">
+        <label for="marca" class="form-label">Marca</label>
+        <input type="text" class="form-control" id="marca" name="marca" required placeholder="Marca">
+        <label for="modelo" class="form-label">Modelo</label>
+        <input type="text" class="form-control" id="modelo" name="modelo" required placeholder="Modelo">
+        <label for="kilometraje" class="form-label">kilometraje</label>
+        <input type="number" class="form-control" id="kilometraje" name="kilometraje" required placeholder="kilometraje">
+        <label for="asientos" class="form-label">Asientos</label>
+        <input type="number" class="form-control" id="asientos" name="asientos" required placeholder="Asientos">
+        <label for="tipo">Placa</label>
+        <input type="text" class="form-control" id="placa" name="placa" required placeholder="Placa">
+        <hr>
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+</div>
