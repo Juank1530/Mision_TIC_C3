@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\83\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj": {}
+    "C:\\83\\Proyecto-Ciclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj": {}
   },
   "projects": {
-    "C:\\83\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj": {
+    "C:\\83\\Proyecto-Ciclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\83\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
+        "projectUniqueName": "C:\\83\\Proyecto-Ciclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
         "projectName": "ProyectoCiclo3.App.Frontend",
-        "projectPath": "C:\\83\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
+        "projectPath": "C:\\83\\Proyecto-Ciclo3.App\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
         "packagesPath": "C:\\Users\\juan.tamara\\.nuget\\packages\\",
-        "outputPath": "C:\\83\\ProyectoCiclo3.App\\ProyectoCiclo3.App.Frontend\\obj\\",
+        "outputPath": "C:\\83\\Proyecto-Ciclo3.App\\ProyectoCiclo3.App.Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\juan.tamara\\AppData\\Roaming\\NuGet\\NuGet.Config"
