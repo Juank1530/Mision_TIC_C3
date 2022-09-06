@@ -1,4 +1,5 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.ListEstacionesModel
 @{
 }
  
@@ -14,29 +15,21 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Centro</td>
-      <td>Cra 27</td>
-      <td>78.58</td>
-      <td>85.69</td>
-      <td>Principal</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Sur</td>
-      <td>Cra 270</td>
-      <td>58.78</td>
-      <td>69.85</td>
-      <td>Sucursal</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Oeste</td>
-      <td>Cra 115</td>
-      <td>35.78</td>
-      <td>78.56</td>
-      <td>Princial</td>
-    </tr>
+     @foreach (var estaciones in Model.Estaciones)
+    {
+        <tr>
+            <td>@estaciones.nombre</td>
+            <td>@estaciones.direccion</td>
+            <td>@estaciones.Coord_x</td>
+            <td>@estaciones.Coord_y</td>
+            <td>@estaciones.tipo</td>
+            <td>
+              <a class="btn btn-info" asp-page="./Details" asp-route-estacionesId="@estaciones.id"><i class="fas fa-adjust"></i>Ver</a>
+              <a class="btn btn-info" asp-page="./Edit" asp-route-estacionesId="@estaciones.id">Editar</a>
+              <a class="btn btn-danger" href="">Eliminar</a>
+              </td>
+        </tr>
+    }
+
   </tbody>
 </table>
