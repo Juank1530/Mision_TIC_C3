@@ -27,5 +27,20 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         public Estaciones GetWithId(int id){
             return estaciones.SingleOrDefault(b => b.id == id);
         }
+
+        //Esto se pego acá nuevo y lo paso el profe 
+        public Estaciones Update(Estaciones newEstacion){
+            var estacion= estaciones.SingleOrDefault(b => b.id == newEstacion.id);
+            if(estacion != null){
+                estacion.nombre = newEstacion.nombre;
+                estacion.direccion = newEstacion.direccion;
+                estacion.Coord_x = newEstacion.Coord_x;
+                estacion.Coord_y = newEstacion.Coord_y;
+                estacion.tipo = newEstacion.tipo;
+            }
+        return estacion;
+        }
+
+
     }
 }

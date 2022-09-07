@@ -18,14 +18,15 @@
      @foreach (var estaciones in Model.Estaciones)
     {
         <tr>
+            <td>@estaciones.id</td>
             <td>@estaciones.nombre</td>
             <td>@estaciones.direccion</td>
             <td>@estaciones.Coord_x</td>
             <td>@estaciones.Coord_y</td>
             <td>@estaciones.tipo</td>
             <td>
-              <a class="btn btn-info" asp-page="./Details" asp-route-estacionesId="@estaciones.id"><i class="fas fa-adjust"></i>Ver</a>
-              <a class="btn btn-info" asp-page="./Edit" asp-route-estacionesId="@estaciones.id">Editar</a>
+              <a class="btn btn-info" asp-page="./Details" asp-route-estacionId="@estaciones.id"><i class="fas fa-adjust"></i>Ver</a>
+              <a class="btn btn-info" asp-page="./Edit" asp-route-estacionId="@estaciones.id">Editar</a>
               <a class="btn btn-danger" href="">Eliminar</a>
               </td>
         </tr>

@@ -1,0 +1,24 @@
+@page
+@model ProyectoCiclo3.App.Frontend.Pages.EditBusModel
+@{
+    var bus = Model.Bus;
+}
+ 
+<div class="text-center">
+<form method="POST">
+    <input type="number" class="form-control d-none" id="id" name="id" placeholder="id" asp-for="@bus.id" readonly>
+    <label for="marca" class="form-label">Marca</label>
+    <input type="text" class="form-control" id="marca" name="marca" required placeholder="Marca" asp-for="@bus.marca">
+    <label for="modelo" class="form-label">Modelo</label>
+    <input type="text" class="form-control" id="modelo" name="modelo" required placeholder="Modelo" asp-for="@bus.modelo">
+    <label for="kilometraje" class="form-label">kilometraje</label>
+    <input type="number" class="form-control" id="kilometraje" name="kilometraje" required placeholder="kilometraje" asp-for="@bus.kilometraje">
+    <label for="asientos" class="form-label">Asientos</label>
+    <input type="number" class="form-control" id="asientos" name="asientos" required placeholder="Asientos" asp-for="@bus.num_asientos">
+    <label for="tipo">Placa</label>
+    <input type="text" class="form-control" id="placa" name="placa" required placeholder="Placa" asp-for="@bus.placa">
+    <hr>
+    <button type="submit" class="btn btn-success">Actualizar</button>
+</form>
+</div>
+

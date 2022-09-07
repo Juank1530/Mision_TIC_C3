@@ -4,6 +4,6 @@ namespace ProyectoCiclo3.App.Dominio{
         public int id { get; set; }
         public string origen { get; set; }
         public string destino { get; set; }
-        public int tiempo_estimado { get; set; }
+        public double tiempo_estimado { get; set; }
     } 
 }
