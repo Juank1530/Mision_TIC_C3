@@ -15,7 +15,7 @@ namespace ProyectoCiclo3.App.Frontend.Pages
        [BindProperty]
        public Estaciones Estacion {get;set;}
  
-        public EditEstacionModel(RepositorioEstaciones repositorioEstaciones)
+       public EditEstacionModel(RepositorioEstaciones repositorioEstaciones)
        {
             this.repositorioEstaciones=repositorioEstaciones;
        }

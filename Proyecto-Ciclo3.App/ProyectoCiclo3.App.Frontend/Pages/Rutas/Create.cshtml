@@ -6,11 +6,11 @@
 <div class="text-center">
     <form method="POST">
         <label for="origen" class="form-label">Origen</label>
-        <input type="text" class="form-control" id="origen" name="origen" required placeholder="Origen">
+        <input type="text" class="form-control" id="origen" name="origen" required placeholder="Origen" asp-for="Ruta.origen">
         <label for="destino" class="form-label">Destino</label>
-        <input type="text" class="form-control" id="destino" name="destino" required placeholder="Destino">
+        <input type="text" class="form-control" id="destino" name="destino" required placeholder="Destino" asp-for="Ruta.destino">
         <label for="tiempo_estimado" class="form-label">Tiempo Estimado</label>
-        <input type="number" class="form-control" id="tiempo_estimado" name="tiempo_estimado" required placeholder="Tiempo Estimado">
+        <input type="number" class="form-control" id="tiempo_estimado" name="tiempo_estimado" required placeholder="Tiempo Estimado" asp-for="Ruta.tiempo_estimado">
         <hr>
         <button type="submit" class="btn btn-success">Enviar</button>
     </form>
