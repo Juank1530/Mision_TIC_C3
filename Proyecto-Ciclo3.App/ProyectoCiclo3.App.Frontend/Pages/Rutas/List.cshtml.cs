@@ -6,23 +6,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ProyectoCiclo3.App.Persistencia.AppRepositorios;
 using ProyectoCiclo3.App.Dominio;
- 
+
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
-    public class ListRutasModel : PageModel
+    public class ListRutaModel : PageModel
     {
-
-        [BindProperty]
-        public Rutas Ruta {get;set;}
        
         private readonly RepositorioRutas repositorioRutas;
+        [BindProperty]
+        public Rutas Ruta {get;set;}
         public IEnumerable<Rutas> Rutas {get;set;}
- 
-    public ListRutasModel(RepositorioRutas repositorioRutas)
+
+    public ListRutaModel(RepositorioRutas repositorioRutas)
     {
         this.repositorioRutas=repositorioRutas;
      }
- 
+
     public void OnGet()
     {
         Rutas=repositorioRutas.GetAll();
@@ -32,12 +31,9 @@ namespace ProyectoCiclo3.App.Frontend.Pages
     {
         if(Ruta.id>0)
         {
-            repositorioRutas.Delete(Ruta.id);
+        repositorioRutas.Delete(Ruta.id);
         }
         return RedirectToPage("./List");
     }
-
-
-
-    }
+}
 }
