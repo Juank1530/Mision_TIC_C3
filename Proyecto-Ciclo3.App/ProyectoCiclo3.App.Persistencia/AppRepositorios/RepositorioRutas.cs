@@ -8,7 +8,7 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
 {
     public class RepositorioRutas
     {
-        private readonly AppContext _appContext = new AppContext();   
+        private readonly AppContext _appContext = new AppContext();
         public Rutas Ruta {get;set;}
         public Estaciones Estacion {get;set;}
 
@@ -28,7 +28,7 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         {
             var newRuta = new Rutas();
             newRuta.origen = _appContext.Estaciones.Find(origen);;
-            newRuta.destino = _appContext.Estaciones.Find(destino);           
+            newRuta.destino = _appContext.Estaciones.Find(destino);
             newRuta.tiempo_estimado = tiempo_estimado;
 
             var addRuta = _appContext.Rutas.Add(newRuta);
@@ -41,16 +41,17 @@ namespace ProyectoCiclo3.App.Persistencia.AppRepositorios
         var ruta = _appContext.Rutas.Find(id);
             if (ruta != null){
                 _appContext.Rutas.Remove(ruta);
-                _appContext.SaveChanges();            
+                _appContext.SaveChanges();
             }
         }
 
-        public Rutas Update(Rutas newRuta){
-            var ruta = _appContext.Rutas.Find(newRuta.id);;
+        public Rutas Update(int id, int origen, int destino, int tiempo_estimado)
+        {            
+            var ruta = _appContext.Rutas.Find(id);;
             if(ruta != null){
-                ruta.origen = newRuta.origen;
-                ruta.destino = newRuta.destino;
-                ruta.tiempo_estimado = newRuta.tiempo_estimado;
+                ruta.origen = _appContext.Estaciones.Find(origen);
+                ruta.destino = _appContext.Estaciones.Find(destino);
+                ruta.tiempo_estimado = tiempo_estimado;
                 //Guardar en base de datos
                  _appContext.SaveChanges();
             }

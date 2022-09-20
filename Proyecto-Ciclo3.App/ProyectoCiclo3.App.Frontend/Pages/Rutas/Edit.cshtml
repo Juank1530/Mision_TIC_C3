@@ -3,17 +3,30 @@
 @{
     var ruta = Model.Ruta;
 }
- 
+
 <div class="text-center">
-<form method="POST">
+  <form method="POST">
     <input type="number" class="form-control d-none" id="id" name="id" placeholder="id" asp-for="@ruta.id" readonly>
-    <label for="origen" class="form-label">Origen</label>
-    <input type="text" class="form-control" id="origen" name="origen" required placeholder="Origen" asp-for="@ruta.origen.nombre">
-    <label for="destino" class="form-label">Destino</label>
-    <input type="text" class="form-control" id="destino" name="destino" required placeholder="Destino" asp-for="@ruta.destino.nombre">
-    <label for="tiempo_estimado" class="form-label">Tiempo Estimado</label>
-    <input type="number" class="form-control" id="tiempo_estimado" name="tiempo_estimado" required placeholder="Tiempo Estimado" asp-for="@ruta.tiempo_estimado">
-  <hr>
-  <button type="submit" class="btn btn-success">Actualizar</button>
-</form>
+
+    <label for="origen" class="form-label">Origen:</label>
+    <select name="origen" class="form-control" required asp-for="@ruta.origen.id">
+      <option value="">Selecciona el origen</option>
+      @foreach (var estacion in Model.Estaciones)
+      {
+        <option value="@estacion.id">@estacion.nombre</option>
+      }
+    </select>
+    <label for="destino" class="form-label">Destino:</label>
+    <select name="destino" class="form-control" required asp-for="@ruta.destino.id">
+      <option value="">Selecciona el destino</option>
+      @foreach (var estacion in Model.Estaciones)
+      {
+        <option value="@estacion.id">@estacion.nombre</option>
+      }
+    </select>
+    <label for="tiempo_estimado" class="form-label">Tiempo Estimado:</label>
+    <input type="number" class="form-control" placeholder="Tiempo Estimado" required name="tiempo_estimado" asp-for="@ruta.tiempo_estimado">
+    <hr>
+    <button type="submit" class="btn btn-success">Actualizar</button>
+  </form>
 </div>

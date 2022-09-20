@@ -6,38 +6,40 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ProyectoCiclo3.App.Persistencia.AppRepositorios;
 using ProyectoCiclo3.App.Dominio;
- 
+
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
     public class EditRutaModel : PageModel
     {
-       private readonly RepositorioRutas repositorioRutas;
-       [BindProperty]
-       public Rutas Ruta {get;set;}
- 
-        public EditRutaModel(RepositorioRutas repositorioRutas)
-       {
-            this.repositorioRutas=repositorioRutas;
-       }
- 
-        public IActionResult OnGet(int rutasId)
+
+        private readonly RepositorioEstaciones repositorioEstaciones;
+        public IEnumerable<Estaciones> Estaciones {get;set;}
+
+        private readonly RepositorioRutas repositorioRutas;
+        [BindProperty]
+        public Rutas Ruta {get;set;}
+
+        public EditRutaModel(RepositorioRutas repositorioRutas, RepositorioEstaciones repositorioEstaciones)
         {
-            Ruta=repositorioRutas.GetWithId(rutasId);
-            return Page();
+            this.repositorioRutas=repositorioRutas;
+            this.repositorioEstaciones=repositorioEstaciones;
         }
 
-        public IActionResult OnPost()
+        public void OnGet(int rutasId)
+        {
+            Estaciones=repositorioEstaciones.GetAll();
+            Ruta=repositorioRutas.GetWithId(rutasId);
+        }
+
+        public IActionResult OnPost(int id, int origen, int destino, int tiempo_estimado)
         {
             if(!ModelState.IsValid)
             {
                 return Page();
+            }else{
+                repositorioRutas.Update(id, origen, destino, tiempo_estimado);
+                return RedirectToPage("./List");
             }
-            if(Ruta.id>0)
-            {
-              Ruta = repositorioRutas.Update(Ruta);
-            }
-            return RedirectToPage("./List");
         }
-
     }
 }
