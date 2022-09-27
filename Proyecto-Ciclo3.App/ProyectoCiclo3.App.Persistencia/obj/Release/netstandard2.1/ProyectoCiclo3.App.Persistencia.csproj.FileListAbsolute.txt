@@ -1,0 +1,12 @@
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\bin\Release\netstandard2.1\ProyectoCiclo3.App.Persistencia.deps.json
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\bin\Release\netstandard2.1\ProyectoCiclo3.App.Persistencia.dll
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\bin\Release\netstandard2.1\ProyectoCiclo3.App.Persistencia.pdb
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\bin\Release\netstandard2.1\ProyectoCiclo3.App.Dominio.dll
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\bin\Release\netstandard2.1\ProyectoCiclo3.App.Dominio.pdb
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\obj\Release\netstandard2.1\ProyectoCiclo3.App.Persistencia.csprojAssemblyReference.cache
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\obj\Release\netstandard2.1\ProyectoCiclo3.App.Persistencia.AssemblyInfoInputs.cache
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\obj\Release\netstandard2.1\ProyectoCiclo3.App.Persistencia.AssemblyInfo.cs
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\obj\Release\netstandard2.1\ProyectoCiclo3.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\obj\Release\netstandard2.1\ProyectoCiclo3.App.Persistencia.csproj.CopyComplete
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\obj\Release\netstandard2.1\ProyectoCiclo3.App.Persistencia.dll
+C:\83\Proyecto-Ciclo3.App\ProyectoCiclo3.App.Persistencia\obj\Release\netstandard2.1\ProyectoCiclo3.App.Persistencia.pdb

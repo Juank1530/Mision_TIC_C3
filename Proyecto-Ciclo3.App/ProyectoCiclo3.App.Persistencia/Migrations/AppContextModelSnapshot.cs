@@ -53,20 +53,22 @@ namespace ProyectoCiclo3.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("Coord_x")
-                        .HasColumnType("int");
+                    b.Property<double>("Coord_x")
+                        .HasColumnType("float");
 
-                    b.Property<int>("Coord_y")
-                        .HasColumnType("int");
+                    b.Property<double>("Coord_y")
+                        .HasColumnType("float");
 
                     b.Property<string>("direccion")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("nombre")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
-                    b.Property<int>("tipo")
-                        .HasColumnType("int");
+                    b.Property<string>("tipo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
@@ -86,8 +88,8 @@ namespace ProyectoCiclo3.App.Persistencia.Migrations
                     b.Property<int?>("origenid")
                         .HasColumnType("int");
 
-                    b.Property<int>("tiempo_estimado")
-                        .HasColumnType("int");
+                    b.Property<double>("tiempo_estimado")
+                        .HasColumnType("float");
 
                     b.HasKey("id");
 

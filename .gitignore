@@ -2,4 +2,6 @@
 /*/obj/*
 Proyecto-Ciclo3.App/ProyectoCiclo3.App.Dominio/bin/*
 Proyecto-Ciclo3.App/ProyectoCiclo3.App.Dominio/obj/*
-Proyecto-Ciclo3.App/ProyectoCiclo3.App.Frontend/bin/Debug/*
+Proyecto-Ciclo3.App/ProyectoCiclo3.App.Frontend/appsettings
+Proyecto-Ciclo3.App/ProyectoCiclo3.App.Persistencia/AppRepositorios/AppContext.*
+ProyectoCiclo3.App/ProyectoCiclo3.App.Persistencia/AppRepositorios/AppContext.*
